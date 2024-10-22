@@ -99,8 +99,8 @@ header .search-bar input {
     color: #555;
 }
 .carousel-inner img {
-    width: auto; /* Make the image take the full width of the container */
-    height: 600px; /* Maintain aspect ratio */
+    width: 20%; /* Make the image take the full width of the container */
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image covers the container without distortion */
     border-radius: 10px; /* Optional: Adds rounded corners to images */
     
@@ -115,7 +115,7 @@ header .search-bar input {
 }
 
 .carousel {
-    display: flex;
+    display: inline;
     transition: transform 0.5s ease-in-out;
 }
 
