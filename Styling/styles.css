@@ -99,22 +99,23 @@ header .search-bar input {
     color: #555;
 }
 .carousel-inner img {
-    width: 20%; /* Make the image take the full width of the container */
-    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Make the image take the full width of the container */
+    height: 600px; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image covers the container without distortion */
     border-radius: 10px; /* Optional: Adds rounded corners to images */
+    
 }
-/* Carousel Styling */
+/* Optional: Carousel Container */
 .carousel-container {
     position: relative;
-    width: 50%;
-    max-width: 50px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 40%; /* Make the container responsive */
+    max-width: 600px; /* Maximum width for larger screens */
+    margin: auto; /* Center the carousel */
+    overflow: hidden; /* Hide any overflow */
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+
