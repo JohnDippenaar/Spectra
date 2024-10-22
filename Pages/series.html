@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spectra - Movies</title>
+    <title>Spectra - Series</title>
     <link rel="stylesheet" href="../Styling/styles.css">
 </head>
 <body>
     <!-- Side Navigation -->
     <div id="sideNav" class="side-nav">
-       
-        <a href="../index.html">Home</a>
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
         <a href="movies.html">Movies</a>
         <a href="series.html">Series</a>
     </div>
@@ -29,25 +29,25 @@
         </nav>
         <div class="search-bar">
             <input type="text" placeholder="Search..." id="search">
-            <button type="submit" onclick="searchMovies()"><i class="fa fa-search"></i></button>
+            <button type="submit" onclick="searchSeries()"><i class="fa fa-search"></i></button>
         </div>
     </header>
 
     <!-- Intro Section -->
     <section class="intro">
-        <h2>Explore Our Movie Collection</h2>
+        <h2>Explore Our Series Collection</h2>
         <p>Lorem ipsum dolor sit amet consectetur. Proin sed lobortis ultricies nulla id ut aliquam.</p>
     </section>
 
-    <!-- Movies Section -->
+    <!-- Series Section -->
     <section class="movies-section">
-        <h2>All Movies</h2>
-        <div class="movies-row" id="movies-list">
-            <!-- Movie Cards will be added here dynamically -->
+        <h2>All Series</h2>
+        <div class="movies-row" id="series-list">
+            <!-- Series Cards will be added here dynamically -->
         </div>
     </section>
 
     <!-- JavaScript -->
-    <script src="../JS/script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

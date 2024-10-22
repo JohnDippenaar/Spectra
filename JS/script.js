@@ -1,16 +1,34 @@
-const url = 'https://streaming-availability.p.rapidapi.com/shows/%7Btype%7D/%7Bid%7D';
-const options = {
-	method: 'GET',
-	headers: {
-		'x-rapidapi-key': '66ff2bcc70msh8505e5847f6dc33p1b45b8jsne542b7641872',
-		'x-rapidapi-host': 'streaming-availability.p.rapidapi.com'
-	}
-};
+let currentIndex = 0;
 
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
+function showSlide(index) {
+    const slides = document.querySelectorAll('.carousel-item');
+    const totalSlides = slides.length;
+
+    if (index >= totalSlides) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+    } else {
+        currentIndex = index;
+    }
+
+    // Hide all slides
+    slides.forEach((slide) => {
+        slide.classList.remove('active');
+    });
+    // Show the current slide
+    slides[currentIndex].classList.add('active');
 }
+
+// Optional: You could use this if you want to handle clicks manually
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+window.onload = function () {
+    showSlide(currentIndex);
+};
