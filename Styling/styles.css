@@ -108,8 +108,7 @@ header .search-bar input {
 /* Optional: Carousel Container */
 .carousel-container {
     position: relative;
-    width: 40%; /* Make the container responsive */
-    max-width: 600px; /* Maximum width for larger screens */
+    width: 80%; /* Make the container responsive */
     margin: auto; /* Center the carousel */
     overflow: hidden; /* Hide any overflow */
 }
