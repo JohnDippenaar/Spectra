@@ -6,7 +6,7 @@ body {
     padding: 0;
 }
 
-h1, h2 {
+h1, h2, p{
     color: #fff;
     text-shadow: 0 0 10px rgba(102, 249, 255, 0.5);
 }
