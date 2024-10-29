@@ -1,0 +1,120 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0;
+    background-color: #000000 !important;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(102, 249, 255, 0.5);
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #fff;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #181818;
+    border-bottom: 1px solid #222;
+}
+
+header .logo h1 {
+    font-size: 40px;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar input {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #ffffff;
+    color: #000000;
+    outline: none;
+}
+
+.search-bar img {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    margin: 40px 20px;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+/* Movies Section */
+.movies-section {
+    margin: 40px 20px;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.movies-section h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.carousel-item img {
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+    background-size: 50%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+button.carousel-control-prev, button.carousel-control-next {
+    transition: background-color 0.3s;
+}
+
+button.carousel-control-prev:hover, button.carousel-control-next:hover {
+    background-color: #ffffff;
+}

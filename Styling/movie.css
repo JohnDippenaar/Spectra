@@ -31,10 +31,9 @@ header {
 }
 
 header .logo h1 {
-    font-size: 2.5rem;
+    font-size: 40px;
     color: #ffffff;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-    cursor: pointer;
 }
 
 nav ul {
@@ -63,16 +62,14 @@ nav ul li a {
     outline: none;
 }
 
-.search-bar button {
+.search-bar img {
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
+    width: 20px;
 }
+
 
 .intro {
     text-align: center;
