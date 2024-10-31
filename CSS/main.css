@@ -13,12 +13,12 @@ h1, h2, p{
 
 a {
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: underline;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #fff;
+    color: #B2DDF7;
 }
 
 header {
