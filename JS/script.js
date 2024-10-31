@@ -33,7 +33,6 @@ window.onload = function () {
     showSlide(currentIndex);
 };
 
-
 // When Importing the images for the carousel use the backdrop path
 
 
