@@ -7,18 +7,24 @@ body {
 }
 
 h1, h2, p{
-    color: #fff;
+    color: #ffffff;
     text-shadow: 0 0 10px rgba(102, 249, 255, 0.5);
 }
 
 a {
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: underline;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #fff;
+    color: #B2DDF7;
+}
+
+.nav-links a.active{
+    text-decoration: underline;
+    color: #B2DDF7;
+    
 }
 
 header {
@@ -76,7 +82,7 @@ nav ul li a {
     text-align: center;
     margin: 40px 20px;
     font-size: 1.2rem;
-    color: #000000;
+    color: #ffffff;
 }
 
 /* Movies Section */
