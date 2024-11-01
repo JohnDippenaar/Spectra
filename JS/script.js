@@ -1,3 +1,14 @@
+// Check login status on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    
+    if (!isLoggedIn) {
+      // Redirect to sign-in page if not logged in
+      window.location.href = 'signin.html';
+    }
+  });
+  
+
 let currentIndex = 0;
 
 function showSlide(index) {

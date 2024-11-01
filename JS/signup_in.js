@@ -1,37 +1,41 @@
-const signupModal = document.getElementById('signup-modal');
-const signinModal = document.getElementById('signin-modal');
-const websiteContent = document.getElementById('website-content');
-const switchToSignin = document.getElementById('switch-to-signin');
-const switchToSignup = document.getElementById('switch-to-signup');
-const signupForm = document.getElementById('signup-form');
+// JavaScript for Sign-In Form
 const signinForm = document.getElementById('signin-form');
 
-// Switch to Sign-In Modal
-switchToSignin.addEventListener('click', (e) => {
-  e.preventDefault();
-  signupModal.classList.add('hidden');
-  signinModal.classList.remove('hidden');
-});
-
-// Switch to Sign-Up Modal
-switchToSignup.addEventListener('click', (e) => {
-  e.preventDefault();
-  signinModal.classList.add('hidden');
-  signupModal.classList.remove('hidden');
-});
-
-// Handle Sign-Up Form Submission
-signupForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  alert('Sign-Up Successful!');
-  signupModal.classList.add('hidden');
-  websiteContent.classList.remove('hidden');
-});
-
-// Handle Sign-In Form Submission
 signinForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  alert('Sign-In Successful!');
-  signinModal.classList.add('hidden');
-  websiteContent.classList.remove('hidden');
+
+  const username = document.getElementById('signin-username').value;
+  const password = document.getElementById('signin-password').value;
+
+  if (username && password) {
+    // Mock sign-in logic
+    localStorage.setItem('isLoggedIn', true);
+    alert('Sign-In Successful!');
+    window.location.href = 'index.html'; // Redirect to home page
+  } else {
+    alert('Please fill in both username and password.');
+  }
+});
+
+// JavaScript for Sign-Up Form
+const signupForm = document.getElementById('signup-form');
+
+signupForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const username = document.getElementById('username').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  if (username && email && password) {
+    // Mock sign-up logic: store data in localStorage
+    localStorage.setItem('username', username);
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
+
+    alert('Sign-Up Successful!');
+    window.location.href = 'signin.html'; // Redirect to Sign-In page after sign-up
+  } else {
+    alert('Please fill in all fields.');
+  }
 });
