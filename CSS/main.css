@@ -100,6 +100,14 @@ nav ul li a {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
+.carousel-inner{
+    height: 900px;
+}
+.carousel-image{
+    height: 300px; /* Set your desired height */
+    object-fit: cover; /* Crop the image to fit the specified height */
+}
+
 .carousel-item img {
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
