@@ -68,6 +68,7 @@ async function GetAPIInfo(){
 GetAPIInfo();
 
 
+//DELETED//
 async function GetPopularAPIInfo(){
     const carouselInner = document.querySelector('#popular-series .carousel-inner'); // Get the carousel inner container
 
