@@ -82,3 +82,36 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(err => console.error(err));
 });
+
+$(document).ready(function() {
+  // Show or hide the button when scrolling
+  $(window).scroll(function() {
+      if ($(this).scrollTop() > 200) {
+          $('#back-to-top').fadeIn();
+      } else {
+          $('#back-to-top').fadeOut();
+      }
+  });
+
+  // Smooth scroll to top when button is clicked
+  $('#back-to-top').click(function() {
+      $('html, body').animate({scrollTop: 0}, 50);
+      return false;
+  });
+});
+
+$(document).ready(function() {
+  $('#search-button').click(function(event) {
+      event.preventDefault(); // Prevents form submission if inside a form
+
+      // Get the search input value
+      const query = $('#search').val().trim();
+
+      if (query) {
+          // Perform the search action (redirect to search results page with query)
+          window.location.href = `search-results.html?query=${encodeURIComponent(query)}`;
+      } else {
+          alert('Please enter a search term.');
+      }
+  });
+});

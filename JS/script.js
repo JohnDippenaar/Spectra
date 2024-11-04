@@ -151,3 +151,62 @@ function nextSlide() {
 function prevSlide() {
     showSlide(currentIndex - 1);
 }
+
+$(document).ready(function() {
+    // Show or hide the button when scrolling
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+    });
+
+    // Smooth scroll to top when button is clicked
+    $('#back-to-top').click(function() {
+        $('html, body').animate({scrollTop: 0}, 50);
+        return false;
+    });
+});
+
+$(document).ready(function() {
+    $('#search-button').click(function(event) {
+        event.preventDefault(); // Prevents form submission if inside a form
+
+        // Get the search input value
+        const query = $('#search').val().trim();
+
+        if (query) {
+            // Perform the search action (redirect to search results page with query)
+            window.location.href = `search-results.html?query=${encodeURIComponent(query)}`;
+        } else {
+            alert('Please enter a search term.');
+        }
+    });
+});
+
+// Function to fetch and display movie list
+async function fetchMovies() {
+    const moviesList = document.getElementById('movies-list');
+    const response = await fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options);
+    const data = await response.json();
+
+    data.results.forEach(movie => {
+        const movieCard = document.createElement('div');
+        movieCard.classList.add('movie-card');
+
+        // Create movie image with a click event to go to details page
+        const moviePoster = document.createElement('img');
+        moviePoster.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+        moviePoster.alt = movie.title;
+        moviePoster.addEventListener('click', () => {
+            window.location.href = `movie-details.html?id=${movie.id}`;
+        });
+
+        movieCard.appendChild(moviePoster);
+        moviesList.appendChild(movieCard);
+    });
+}
+
+// Call fetchMovies to display the list on load
+fetchMovies();

@@ -1,0 +1,24 @@
+.movie-container {
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin: 40px 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(102, 249, 255, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    text-align: center;
+}
+
+#movie-poster {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+#availability {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #B2DDF7;
+}
