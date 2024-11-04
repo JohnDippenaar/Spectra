@@ -82,3 +82,36 @@ $(document).ready(function() {
       }
   });
 });
+
+const options = {
+  method: 'GET',
+  headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNWM5NTdiZGNmY2QzYmY1ZThlMmZjNzY0ZGQ2OGQzNSIsIm5iZiI6MTcyOTYyOTI4MS4yNTA0NzcsInN1YiI6IjY3MTZiOGZhNWFjOTZiODhhMDM1ZWIwMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.eMEDCI7FAhpRZlMer1zuj8Qz1Akoje4YmZawaBGNZdY' // Replace with actual API key
+  }
+};
+
+// Function to create and display movie cards
+async function fetchMovies() {
+  const response = await fetch('https://api.themoviedb.org/3/discover/movie?language=en-US', options);
+  const data = await response.json();
+
+  const moviesList = document.getElementById('movies-list');
+  data.results.forEach(movie => {
+      const movieCard = document.createElement('div');
+      movieCard.className = 'movie-card';
+      movieCard.innerHTML = `
+          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" data-id="${movie.id}">
+          <h3>${movie.title}</h3>
+      `;
+      moviesList.appendChild(movieCard);
+      
+      // Add click event to each image
+      movieCard.querySelector('img').addEventListener('click', () => {
+          window.location.href = `movie-details.html?id=${movie.id}`;
+      });
+  });
+}
+
+// Call function to load movies on page load
+fetchMovies();
