@@ -141,10 +141,6 @@ button.carousel-control-next {
     transition: background-color 0.3s;
 }
 
-button.carousel-control-prev:hover,
-button.carousel-control-next:hover {
-    background-color: #ffffff;
-}
 
 .footer {
     background-color: #999;
@@ -234,6 +230,7 @@ button.carousel-control-next:hover {
     .carousel-inner {
         height: auto;
     }
+    
 
     .footerContent {
         flex-direction: column;
