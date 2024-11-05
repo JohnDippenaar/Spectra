@@ -68,6 +68,7 @@ async function GetAPIInfo(){
 GetAPIInfo();
 
 
+//DELETED//
 async function GetPopularAPIInfo(){
     const carouselInner = document.querySelector('#popular-series .carousel-inner'); // Get the carousel inner container
 
@@ -184,3 +185,28 @@ $(document).ready(function() {
     });
 });
 
+// Function to fetch and display movie list
+async function fetchMovies() {
+    const moviesList = document.getElementById('movies-list');
+    const response = await fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options);
+    const data = await response.json();
+
+    data.results.forEach(movie => {
+        const movieCard = document.createElement('div');
+        movieCard.classList.add('movie-card');
+
+        // Create movie image with a click event to go to details page
+        const moviePoster = document.createElement('img');
+        moviePoster.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+        moviePoster.alt = movie.title;
+        moviePoster.addEventListener('click', () => {
+            window.location.href = `movie-details.html?id=${movie.id}`;
+        });
+
+        movieCard.appendChild(moviePoster);
+        moviesList.appendChild(movieCard);
+    });
+}
+
+// Call fetchMovies to display the list on load
+fetchMovies();
