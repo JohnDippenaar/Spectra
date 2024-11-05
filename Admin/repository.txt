@@ -1,0 +1,5 @@
+GitHub Repository Link :
+
+https://github.com/JohnDippenaar/SyntaxSyndicates.git
+
+John Dippenaar has only commited on the main branch and not his own so there wont be any commits on that branch
