@@ -2,8 +2,4 @@ GitHub Repository Link :
 
 https://github.com/JohnDippenaar/SyntaxSyndicates.git
 
-Website URL (to be resolved , please find url in google document):
-
-https://docs.google.com/document/d/1bupCGgXOtjrlNppSLWs8Z8B3vr3Giy4_GEjACxljpTo/edit?usp=sharing
-
-John Dippenaar has only comited on the main branch and not his own so there wont be any comits on that branch
+John Dippenaar has only commited on the main branch and not his own so there wont be any commits on that branch
